@@ -12,7 +12,7 @@ pipeline {
         stage('Build Fat Jar') {
             steps {
                 // This command creates the fat jar in the /target folder
-                sh 'mvn clean package -DskipTests'
+                sh 'mvn -f complete/pom.xml clean package -DskipTests'
             }
         }
     }
